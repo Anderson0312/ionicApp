@@ -80,6 +80,40 @@ ion-content {
                     color: #db5537;
                 }
             }
+
+            .touchLogin {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                border-bottom: 1px solid gray;
+
+                ion-icon {
+                    color: rgb(172, 59, 59);
+                }
+            }
+
+            .faceLogin {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                border-bottom: 1px solid gray;
+
+                ion-icon {
+                    color: rgb(172, 59, 59);
+                }
+            }
+        }
+    }
+
+    .navigator{
+        display: flex;
+        justify-content:center;
+        width: 100%;
+
+        p{
+            color: white;
         }
     }
 }

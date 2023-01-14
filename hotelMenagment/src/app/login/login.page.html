@@ -50,6 +50,22 @@
         <ion-icon name="logo-twitter" (click)="goTotwitter()"></ion-icon>
         <ion-icon name="logo-google" (click)="goTogoogle()"></ion-icon>
       </div>
+
+      <div class="touchLogin" (click)="touchLogin()">
+        <ion-icon name="finger-print-outline"></ion-icon>
+        <p>Sign In Using Touch ID</p>
+      </div>
+
+      <div class="faceLogin" (click)="faceLogin()">
+        <ion-icon name="eye-outline">
+        </ion-icon>
+        <p>Sign In With Face ID</p>
+      </div>
+
+    </div>
+    
+    <div class="navigator">
+      <p (click)="goToRegister()">Don't have an Account ? Register Now</p>
     </div>
   </div>
 </ion-content>

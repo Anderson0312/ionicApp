@@ -43,4 +43,16 @@ export class LoginPage implements OnInit {
     
   }
 
+  touchLogin(){
+
+  }
+
+  faceLogin() {
+
+  }
+
+  goToRegister() {
+    
+  }
+
 }
