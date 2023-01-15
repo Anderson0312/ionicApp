@@ -15,7 +15,54 @@
 <ion-content>
 
   <div class="top">
- 
+    <ion-segment value="upcoming">
+      <ion-segment-button value="upcoming">
+        <ion-label>Upcoming</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="past">
+        <ion-label>Past Orders</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="" *ngFor="let order of orders">
+    <p id="date">{{order.date}}</p>
+    <div class="upperBox" *ngFor="let Singleorder of order.order">
+
+      <div class="image">
+        <img id="imgProd" src="../../assets/food/{{Singleorder.image}}" alt="">
+      </div>
+
+      <div class="title">
+        <h3>{{Singleorder.title}}</h3>
+      </div>
+
+      <div class="menu">
+        <h3>
+          <ion-icon name="ellipsis-vertical-outline" color="dark"></ion-icon>
+        </h3>
+      </div>
+
+      <div class="orderId">
+        <p>Order ID: #{{Singleorder.transID}}</p>
+      </div>
+
+      <div class="amount">
+        <p>R$ {{Singleorder.amount}}</p>
+      </div>
+
+      <div class="status">
+        <p [ngStyle]="{'color':(Singleorder.status === 'CONFIRM') ? 'green' : 'red', 'background':(Singleorder.status === 'CONFIRM') ? '#e4f4eb' : '#f7d0c7'}">{{Singleorder.status}}</p>
+      </div>
+
+      <div class="time">
+        <p>est. Time {{Singleorder.time}}</p>
+      </div>
+
+      <div class="edit">
+        <button class="btn" type="submit">Reorder</button>
+      </div>
+    </div>
   </div>
 
 </ion-content>
