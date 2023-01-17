@@ -23,6 +23,16 @@ const routes: Routes = [
     path: 'order',
     loadChildren: () => import('./order/order.module').then( m => m.OrderPageModule)
   },
+  {
+    path: 'order-menu',
+    loadChildren: () => import('./popup/order-menu/order-menu.module').then( m => m.OrderMenuPageModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () => import('./popup/orders/orders.module').then( m => m.OrdersPageModule)
+  },
+
+
 ];
 
 @NgModule({

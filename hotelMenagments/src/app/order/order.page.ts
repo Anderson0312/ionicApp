@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { OrdersPage } from '../popup/orders/orders.page';
 
 @Component({
   selector: 'app-order',
@@ -106,9 +108,24 @@ export class OrderPage implements OnInit {
 }
 ]
 
-  constructor() { }
+  constructor(public popoverController: PopoverController) { }
 
   ngOnInit() {
+  }
+
+  segmentChanged($event: any) {
+    console.log($event.detail.value);
+
+  }
+
+  async presentPopover($event: any) {
+    const popover = await this.popoverController.create({
+      component: OrdersPage,
+      event: $event,
+      mode: 'ios',
+      translucent: true
+    })
+    await popover.present();
   }
 
 }
