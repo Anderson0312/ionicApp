@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'orders',
     loadChildren: () => import('./popup/orders/orders.module').then( m => m.OrdersPageModule)
+  },  {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
   },
+
 
 
 ];
