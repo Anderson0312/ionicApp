@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppServiceService {
 
-  constructor() { }
+
+  constructor(
+    public http: HttpClient
+  ) { }
 
   getAllDishes(): Observable<any>{
     return this.http.get('assets/json/dish.json')
@@ -17,6 +21,6 @@ export class AppServiceService {
   }
 
   getAllPayments(): Observable<any>{
-    return this.http.get('assets/json/payments.json')
+    return this.http.get('assets/json/payment.json')
   }
 }

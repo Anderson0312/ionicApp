@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'filter',
+    redirectTo: 'payment',
     pathMatch: 'full'
   },
   {
@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'orders',
     loadChildren: () => import('./popup/orders/orders.module').then( m => m.OrdersPageModule)
-  },  {
+  },
+  {
     path: 'payment',
     loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
   },
