@@ -14,6 +14,18 @@
 
 <ion-content>
  <div *ngFor="let payment of payment">
-  <p id="date">{{payment}}</p>
+  <p id="date">{{payment.date}}</p>
+
+ <div class="upperBox" *ngFor="let item of payment.transactions">
+  <div class="img">
+    <img src="../../assets/food/{{item.image}}">
+  </div>
+  <div class="title">{{item.title}}</div>
+  <div class="price">{{item.amout}}</div>
+  <div class="transId">Transaction ID: #{{item.transId}}</div>
+  <div class="time">{{item.time}}</div>
+  <div class="bank">{{item.bank}}</div>
+  <div class="status" [ngStyle]="{'color': (item.status === 'SUCCESS') ? 'green': (item.status === 'FAILED') ? 'red' : 'orange'}">{{item.status}}</div>
  </div>
+</div>
 </ion-content>

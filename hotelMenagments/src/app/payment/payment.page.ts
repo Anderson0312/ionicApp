@@ -9,13 +9,13 @@ import { AppServiceService } from '../app-service.service';
 })
 export class PaymentPage implements OnInit {
 
-  payment = [];
+  payment = <any>[];
   constructor(public loadingController: LoadingController, private service: AppServiceService) { }
 
   ngOnInit() {
     this.presentLoading().then(() => {
       this.service.getAllPayments().subscribe((res) => {
-        this.payment = res.document.records[0].date;
+        this.payment = res.document.records;
         console.log(this.payment);
         this.loadingController.dismiss();
       })
