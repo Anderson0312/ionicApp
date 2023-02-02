@@ -1,0 +1,61 @@
+
+<ion-content>
+  <div class="img">
+    <div class="top">
+      <div class="back-div">
+        <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+        <ion-icon name="star-outline" color="light" id="end"></ion-icon>
+      </div>
+    </div>
+
+    <div class="botton">
+      <div class="frist">
+        <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="">
+      </div>
+      <div class="second">
+        <h4>Anderson Moura</h4>
+        <p>Rio de Janeiro</p>
+        <p>3.0 <ion-icon name="star-outline"></ion-icon>(123 Reviews)</p>
+      </div>
+
+      <div class="third">
+        <h4>$20/hr</h4>
+        <ion-button size="small" color="success"> OPEN</ion-button>
+      </div>
+    </div>
+    <img src="../../assets/food/001.jpg"  id='myimg'alt="">
+  </div>
+
+  <div class="menu">
+    <div class="menuDiv">
+      <ion-icon name="chatbubble-outline"></ion-icon>
+      <p>Message</p>
+    </div>
+
+    <div class="menuDiv">
+      <ion-icon name="call-outline"></ion-icon>
+      <p>Call</p>
+    </div>
+
+    <div class="menuDiv">
+      <ion-icon name="map-outline"></ion-icon>
+      <p>Direction</p>
+    </div>
+
+    <div class="menuDiv">
+      <ion-icon name="share-outline"></ion-icon>
+      <p>Share</p>
+    </div>
+  </div>
+
+  <div class="ch-menu">
+    <p>Chef Menu</p>
+
+    <div class="wrapper">
+      <div class="item" *ngFor="let item of user">
+        <img id='img' src="../../assets/food/{{item.image}}" alt="">
+        <p>{{item.title | slice:0:6}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -23,4 +23,8 @@ export class AppServiceService {
   getAllPayments(): Observable<any>{
     return this.http.get('assets/json/payment.json')
   }
+
+  getAllMenuDishes(): Observable<any>{
+    return this.http.get('assets/json/menuDush.json')
+  }
 }
