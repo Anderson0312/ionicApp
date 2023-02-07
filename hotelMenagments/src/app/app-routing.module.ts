@@ -38,9 +38,18 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },  {
+  },
+  {
     path: 'chef-details',
     loadChildren: () => import('./chef-details/chef-details.module').then( m => m.ChefDetailsPageModule)
+  },
+  {
+    path: 'searchchef',
+    loadChildren: () => import('./searchchef/searchchef.module').then( m => m.SearchchefPageModule)
+  },
+  {
+    path: 'profile-popup',
+    loadChildren: () => import('./popup/profile-popup/profile-popup.module').then( m => m.ProfilePopupPageModule)
   }
 
 
