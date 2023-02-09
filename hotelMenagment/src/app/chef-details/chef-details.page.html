@@ -1,0 +1,136 @@
+
+<ion-content>
+  <div class="img">
+    <div class="top">
+      <div class="back-div">
+        <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+        <ion-icon name="star-outline" color="light" id="end"></ion-icon>
+      </div>
+    </div>
+
+    <div class="botton">
+      <div class="frist">
+        <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="">
+      </div>
+      <div class="second">
+        <h4>Anderson Moura</h4>
+        <p>Rio de Janeiro</p>
+        <p>3.0 <ion-icon name="star-outline"></ion-icon>(123 Reviews)</p>
+      </div>
+
+      <div class="third">
+        <h4>$20/hr</h4>
+        <ion-button size="small" color="success"> OPEN</ion-button>
+      </div>
+    </div>
+    <img src="../../assets/food/001.jpg"  id='myimg'alt="">
+  </div>
+
+  <div class="menu">
+    <div class="menuDiv">
+      <ion-icon name="chatbubble-outline"></ion-icon>
+      <p>Message</p>
+    </div>
+
+    <div class="menuDiv">
+      <ion-icon name="call-outline"></ion-icon>
+      <p>Call</p>
+    </div>
+
+    <div class="menuDiv">
+      <ion-icon name="map-outline"></ion-icon>
+      <p>Direction</p>
+    </div>
+
+    <div class="menuDiv">
+      <ion-icon name="share-outline"></ion-icon>
+      <p>Share</p>
+    </div>
+  </div>
+
+  <div class="ch-menu">
+    <p>Chef Menu</p>
+
+    <div class="wrapper">
+      <div class="item" *ngFor="let item of user">
+        <img id='img' src="../../assets/food/{{item.image}}" alt="">
+        <p>{{item.title | slice:0:6}}</p>
+      </div>
+    </div>
+    <ion-segment [value]="segId" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="overview">
+        <ion-label>OverView</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="service">
+        <ion-label>Service</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="reviews">
+        <ion-label>Reviews</ion-label>
+      </ion-segment-button>
+  
+    </ion-segment>
+  </div>
+
+  <div class="content">
+    <div class="overview">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <p>About</p>
+          </ion-col>
+          <ion-col size="7">
+            <p class="ion-text-end">Avarage Price: <span>$20</span> Hour
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr>
+      <p class="intro">Hi I am Anderson I've always had a passion for coooking. In the day im a chef for a 5star restaurant. Afterwards, I use Open Kitchen to share my passion to the world. <span>Read More</span></p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <p>Hours Available</p>
+          </ion-col>
+          <ion-col size="7">
+            <p class="ion-text-end"> <span>View Datails</span></p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <hr>
+
+      <div class="hrs">
+        <ion-label>
+          <ion-icon name="ellipse"></ion-icon>
+          <span>Monday-Friday:</span>4:00pm - 8:00pm
+        </ion-label>
+        <br>
+        <ion-label>
+          <ion-icon name="ellipse"></ion-icon>
+            <span>Saturday- Sunday:</span>4:00pm - 8:00pm  
+        </ion-label>
+      </div>
+
+      <div class="address">
+        <h3>Address</h3>
+
+        <ion-label> Rio de janeiro ,RJ, Ilha do Governador</ion-label>
+
+        <h3>Photos <span>View All</span></h3>
+
+        <div class="lower-box">
+          <div class="wrapper">
+            <div class="item" *ngFor="let item of dish">
+              <img id="img" src="../../assets/food/{{item.image}}">
+            </div>
+          </div>
+        </div>
+        <ion-button expand="block" (click)="goToEvent()">Book a Chef</ion-button>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

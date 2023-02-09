@@ -10,6 +10,9 @@ import { AppServiceService } from '../app-service.service';
 export class ChefDetailsPage implements OnInit {
 
   user = <any>[];
+  segId = 'overview';
+
+  dish = <any>[];
   constructor(public loadingController: LoadingController, private service: AppServiceService) { }
 
   ngOnInit() {
@@ -19,6 +22,10 @@ export class ChefDetailsPage implements OnInit {
         console.log(this.user[1])
         this.loadingController.dismiss();
       })
+      this.service.getAllDishes().subscribe((res) =>{
+        this.dish = res.document.records;
+        console.log(this.dish)
+      })
     });
   }
 
@@ -27,6 +34,14 @@ export class ChefDetailsPage implements OnInit {
       message: 'Please Wait..'
     });
     await loading.present();
+  }
+
+  segmentChanged($event:any){
+    this.segId = $event.detail.value;
+  }
+
+  goToEvent(){
+
   }
 
 }

@@ -27,4 +27,6 @@ export class AppServiceService {
   getAllMenuDishes(): Observable<any>{
     return this.http.get('assets/json/menuDush.json')
   }
+
+
 }
