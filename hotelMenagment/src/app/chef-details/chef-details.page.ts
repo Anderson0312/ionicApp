@@ -12,6 +12,7 @@ export class ChefDetailsPage implements OnInit {
   user = <any>[];
   segId = 'overview';
 
+  orders = <any>[];
   dish = <any>[];
   constructor(public loadingController: LoadingController, private service: AppServiceService) { }
 
@@ -25,6 +26,10 @@ export class ChefDetailsPage implements OnInit {
       this.service.getAllDishes().subscribe((res) =>{
         this.dish = res.document.records;
         console.log(this.dish)
+      })
+      this.service.getAllOrders().subscribe((res) =>{
+        this.orders = res.document.records;
+        console.log(this.orders)
       })
     });
   }
@@ -41,6 +46,10 @@ export class ChefDetailsPage implements OnInit {
   }
 
   goToEvent(){
+
+  }
+
+  presentPopover($event:any){
 
   }
 
