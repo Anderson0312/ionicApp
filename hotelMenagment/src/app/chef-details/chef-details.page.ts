@@ -53,4 +53,8 @@ export class ChefDetailsPage implements OnInit {
 
   }
 
+  presentActionSheet() {
+    
+  }
+
 }
