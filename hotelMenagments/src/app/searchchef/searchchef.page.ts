@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ProfilePopupPage } from '../popup/profile-popup/profile-popup.page';
+import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
 
 
 
