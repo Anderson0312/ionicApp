@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, PopoverController } from '@ionic/angular';
+
 import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
+import {ProfilemenuComponent} from '../pages/component/profilemenu.component'
 
 
 
@@ -10,8 +12,29 @@ import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
   styleUrls: ['./searchchef.page.scss'],
 })
 export class SearchchefPage implements OnInit {
-
-  constructor(private modalCtrl : ModalController) { }
+  data = [
+    {
+      "image_id": "01",
+      "image": "001.jpg"
+    },
+    {
+      "image_id": "02",
+      "image": "002.jpg"
+    },
+    {
+      "image_id": "03",
+      "image": "003.jpg"
+    },
+    {
+      "image_id": "04",
+      "image": "004.jpg"
+    },
+    {
+      "image_id": "05",
+      "image": "005.jpg"
+    },
+  ]
+  constructor(private modalCtrl : ModalController, private popoverControl : PopoverController) { }
 
   ngOnInit() {
   }
@@ -35,6 +58,16 @@ export class SearchchefPage implements OnInit {
       cssClass: 'my-modal'
     });
     return await modal.present();
+  }
+
+  async presentPopover($event: any){
+    const popover = await this.popoverControl.create({
+      component: ProfilemenuComponent,
+      event: $event,
+      mode: 'ios',
+      translucent: true
+    })
+    await popover.present();
   }
 
 }
