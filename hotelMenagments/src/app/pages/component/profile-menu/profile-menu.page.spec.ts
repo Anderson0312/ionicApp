@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ProfilemenuComponent } from './profilemenu.component';
+import { ProfileMenuPage } from './profile-menu.page';
 
-describe('ProfilemenuComponent', () => {
-  let component: ProfilemenuComponent;
-  let fixture: ComponentFixture<ProfilemenuComponent>;
+describe('ProfileMenuPage', () => {
+  let component: ProfileMenuPage;
+  let fixture: ComponentFixture<ProfileMenuPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfilemenuComponent ],
+      declarations: [ ProfileMenuPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ProfilemenuComponent);
+    fixture = TestBed.createComponent(ProfileMenuPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

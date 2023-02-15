@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController, PopoverController } from '@ionic/angular';
 
 import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
-import {ProfilemenuComponent} from '../pages/component/profilemenu.component'
+import { ProfileMenuPage } from '../pages/component/profile-menu/profile-menu.page';
 
 
 
@@ -62,7 +62,7 @@ export class SearchchefPage implements OnInit {
 
   async presentPopover($event: any){
     const popover = await this.popoverControl.create({
-      component: ProfilemenuComponent,
+      component: ProfileMenuPage,
       event: $event,
       mode: 'ios',
       translucent: true

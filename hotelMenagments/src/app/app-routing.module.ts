@@ -50,7 +50,11 @@ const routes: Routes = [
   {
     path: 'profile-popup',
     loadChildren: () => import('./profile-popup/profile-popup.module').then( m => m.ProfilePopupPageModule)
+  },  {
+    path: 'profile-menu',
+    loadChildren: () => import('./pages/component/profile-menu/profile-menu.module').then( m => m.ProfileMenuPageModule)
   }
+
 
 
 
