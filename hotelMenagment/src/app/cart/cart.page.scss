@@ -37,3 +37,22 @@ ion-header{
     }
   
   }
+
+  ion-content{
+    --background: #f0f0f2;
+    font-family: 'Poppins', sans-serif;
+
+    .upperBox{
+        width:100%;
+        background-color: #fff;
+        color: black;
+        margin-top:10px;
+        box-shadow: rgba(0, 0,0 ,0.15) 1.95px 1.95px 2.6px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 40% 35% 15% 10%;
+        grid-template-rows: 15% 35% 35% 15%;
+        gap: 5px 5px;
+        grid-template-areas: 'image title title menu' 'image orderId orderId orderId' 'image amout status status' 'image edit edit edit';
+    }
+  }

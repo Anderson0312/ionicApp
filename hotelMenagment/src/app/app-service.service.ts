@@ -28,5 +28,7 @@ export class AppServiceService {
     return this.http.get('assets/json/menuDush.json')
   }
 
-
+  getAllCart(): Observable<any> {
+    return this.http.get('assets/json/cart.json')
+  }
 }

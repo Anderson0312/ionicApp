@@ -1,5 +1,6 @@
+import { AppServiceService } from './../app-service.service';
 import { Component, OnInit } from '@angular/core';
-import { ModalController, PopoverController } from '@ionic/angular';
+import { LoadingController, ModalController, PopoverController } from '@ionic/angular';
 import { ProfileMenuPage } from '../pages/component/profile-menu/profile-menu.page';
 import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
 
@@ -10,13 +11,40 @@ import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
 })
 export class CartPage implements OnInit {
 
-  constructor(private modalCtrl : ModalController, private popoverControl : PopoverController) { }
+  orders= <any>[];
+  constructor(private modalCtrl : ModalController, private popoverControl : PopoverController, private service :AppServiceService, public loadingController: LoadingController) { }
 
   ngOnInit() {
+    this.presentLoading().then(() => {
+      this.service.getAllCart().subscribe((result) => {
+        this.orders = result.document.records;
+        console.log(this.orders);
+        this.loadingController.dismiss();
+      });
+    });
   }
 
   notificationModal($event :any) {
 
+  }
+
+  deleteItem(orderid :any ){
+
+  }
+
+  remove(i:any) {
+
+  }
+
+  add(i:any) {
+    
+  }
+
+  async presentLoading(){
+    const loading = await this.loadingController.create({
+      message : 'Please Wait...'
+    });
+    await loading.present();
   }
 
   async presentModal($event: any) {
@@ -46,5 +74,7 @@ export class CartPage implements OnInit {
     })
     await popover.present();
   }
+
+
 
 }
