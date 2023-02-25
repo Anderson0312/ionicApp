@@ -53,6 +53,10 @@ const routes: Routes = [
   },  {
     path: 'profile-menu',
     loadChildren: () => import('./pages/component/profile-menu/profile-menu.module').then( m => m.ProfileMenuPageModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
   }
 
 

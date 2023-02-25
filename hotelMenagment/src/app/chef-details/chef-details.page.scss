@@ -256,9 +256,63 @@ ion-content {
           grid-template-columns: 40% 35% 15% 10%;
           grid-template-rows: 15% 35% 35% 15%;
           gap: 5px 5px;
-          grid-template-areas: "image title title menu" "image orderId orderId" "image amount status status" "image time edit edit";
+          grid-template-areas: "image title title menu" "image orderId orderId orderId" "image amount status status" "image time edit edit";
+
+          .image{
+            grid-area: image;
+            img{
+              padding: 10px;
+              border-radius: 5px;
+              height:auto;
+              width: 100%;
+            }
+          }
+
+          .title{
+            grid-area: title;
+            color: #f15b3a;
+            h3{
+              font-size: 26px;
+            }
+          }
+
+          .menu{
+            grid-area: menu;
+            margin-right: 10px;
+            justify-self: center;
+          }
+
+          .amount{
+            grid-area: amount;
+            align-self: start;
+            justify-self: start;
+            margin-top: -25px;
+          }
+
+          .time{
+            grid-area: time;
+            p{
+              margin-top:-30px;
+            }
+          }
+
+          .edit{
+            grid-area: edit;
+            margin-top:-50px;
+            .btn{
+              font-size:18px;
+              background: #f15b3a;
+              padding: 10px 20px;
+              text-align: center;
+              color: #fff;
+            }
+          }
         }
       }
+    }
+
+    .reviews{
+      
     }
   }
 

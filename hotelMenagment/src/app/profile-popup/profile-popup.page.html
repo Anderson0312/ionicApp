@@ -2,7 +2,7 @@
   <ion-toolbar color="danger">
     <ion-title>Anderson Moura</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="dismiss()">
+      <ion-button (click)="close()">
         <ion-icon slot="icon-only" name="close" ></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -20,13 +20,15 @@
         <p>Houston, Texas</p>
         <p><ion-icon name="star"></ion-icon><span>1.0</span>(234 Reviews)</p>
       </div>
+
+      <div class="hour-text">
+        <p class="ion-text-end"> 1.0 km<ion-icon color="red" name="ellipsis-vertical-outline"></ion-icon></p>
+        <h5 class="ion-text-end">$20/Hout</h5>
+        <ion-button color="danger">Book</ion-button>
+      </div>
     </div>
 
-    <div class="hour-text">
-      <p class="ion-text-end"> 1.0 km<ion-icon color="red" name="ellipsis-vertical-outline"></ion-icon></p>
-      <h5 class="ion-text-end">$20/Hout</h5>
-      <ion-button color="danger">Book</ion-button>
-    </div>
+
   </div>
 
 

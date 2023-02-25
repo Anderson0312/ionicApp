@@ -8,13 +8,13 @@ import { PopoverController } from '@ionic/angular';
 })
 export class ProfilePopupPage implements OnInit {
 
-  constructor(public popoverController: PopoverController) { }
+  constructor(private popoverControl : PopoverController) { }
 
   ngOnInit() {
   }
 
-  dismiss(){
-    this.popoverController.dismiss();
+  close(){
+    this.popoverControl.dismiss();
   }
 
 }

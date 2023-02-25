@@ -1,3 +1,4 @@
+import { PopoverController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileMenuPage implements OnInit {
 
-  constructor() { }
+  constructor(private popoverController : PopoverController) { }
 
   ngOnInit() {
+  }
+
+  Close(){
+    this.popoverController.dismiss();
   }
 
 }

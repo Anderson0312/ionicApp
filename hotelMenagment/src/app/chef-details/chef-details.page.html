@@ -144,7 +144,7 @@
           <p id="date">{{order.date}}</p>
           <div class="upperBox1" *ngFor="let Singleorder of order.transactions">
               <div class="image">
-                <img src="../../assets/food/{{Singleorder.image}}" alt="">
+                <img id='img' src="../../assets/food/{{Singleorder.image}}" alt="">
               </div>
 
               <div class="title">
@@ -164,6 +164,7 @@
               <div class="amount">
                 <h3>${{Singleorder.amout}}</h3>
               </div>
+              
               <div class="status">
 
               </div>
@@ -185,7 +186,7 @@
 
 
     <div class="reviews" *ngIf="segId == 'reviews'">
-
+      
     </div>
   </div>
 

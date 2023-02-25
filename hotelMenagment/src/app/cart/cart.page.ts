@@ -1,39 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, PopoverController } from '@ionic/angular';
-
-import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
 import { ProfileMenuPage } from '../pages/component/profile-menu/profile-menu.page';
-
-
+import { ProfilePopupPage } from '../profile-popup/profile-popup.page';
 
 @Component({
-  selector: 'app-searchchef',
-  templateUrl: './searchchef.page.html',
-  styleUrls: ['./searchchef.page.scss'],
+  selector: 'app-cart',
+  templateUrl: './cart.page.html',
+  styleUrls: ['./cart.page.scss'],
 })
-export class SearchchefPage implements OnInit {
-  data = [
-    {
-      "image_id": "01",
-      "image": "001.jpg"
-    },
-    {
-      "image_id": "02",
-      "image": "002.jpg"
-    },
-    {
-      "image_id": "03",
-      "image": "003.jpg"
-    },
-    {
-      "image_id": "04",
-      "image": "004.jpg"
-    },
-    {
-      "image_id": "05",
-      "image": "005.jpg"
-    },
-  ]
+export class CartPage implements OnInit {
+
   constructor(private modalCtrl : ModalController, private popoverControl : PopoverController) { }
 
   ngOnInit() {
@@ -54,7 +30,8 @@ export class SearchchefPage implements OnInit {
       keyboardClose:true,
       componentProps: {
         'name': 'yamin',
-      'city': 'naded'      },
+      'city': 'naded'      
+    },
       cssClass: 'my-modal'
     });
     return await modal.present();
