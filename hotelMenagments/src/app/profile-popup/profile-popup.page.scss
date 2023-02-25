@@ -39,6 +39,14 @@ ion-content{
         }
       }
 
+      .hour-text{
+        flex-grow: 1;
+        p{
+          margin-top: 10px;
+          color: #ccc;
+        }
+      }
+
     }
   }
 }
