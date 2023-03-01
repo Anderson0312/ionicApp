@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "ionic",
+			"script": "start",
+			"path": "hotelMenagments",
+			"problemMatcher": [],
+			"label": "npm: start - hotelMenagments",
+			"detail": "ionic serve"
+		}
+	]
+}
